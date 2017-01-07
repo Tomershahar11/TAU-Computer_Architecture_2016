@@ -4,7 +4,7 @@
 #include<math.h>
 /*oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo Defines OoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO*/
 
-#define _CRT_SECURE_NO_DEPRECATE // avoid getting errors for '_s functions'
+//#define _CRT_SECURE_NO_DEPRECATE // avoid getting errors for '_s functions'
 #define ADDRESS2 24
 
 /*oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo Main OoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO*/
@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 	for (i = 0; i< memSize / 16 - 1; ++i)
 		//for(i=0;i<2000;++i)
 	{
-		cycle = i % 8;
+		cycle = i % 16;
 		switch (cycle)
 		{
 		case 0:
@@ -51,8 +51,40 @@ int main(int argc, char* argv[])
 			fprintf(FpMenin, "66\n");
 			break;
 
-		default:
+		case 7:
 			fprintf(FpMenin, "77\n");
+			break;
+
+		case 8:
+			fprintf(FpMenin, "88\n");
+			break;
+
+		case 9:
+			fprintf(FpMenin, "99\n");
+			break;
+
+		case 10:
+			fprintf(FpMenin, "AA\n");
+			break;
+
+		case 11:
+			fprintf(FpMenin, "BB\n");
+			break;
+
+		case 12:
+			fprintf(FpMenin, "CC\n");
+			break;
+
+		case 13:
+			fprintf(FpMenin, "DD\n");
+			break;
+
+		case 14:
+			fprintf(FpMenin, "EE\n");
+			break;
+
+		case 15:
+			fprintf(FpMenin, "FF\n");
 			break;
 		}
 

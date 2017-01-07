@@ -4,16 +4,21 @@
 #include<time.h>
 #include<math.h>
 
+//#define _CRT_SECURE_NO_DEPRECATE // avoid getting errors for '_s functions'
+#define _CRT_SECURE_NO_WARNINGS
+
 /*oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo Functions OoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO*/
 
 
-int Cast_char_hex_to_dec(char c)
-{
-	if (c >= '0' && c <= '9')
-		return (c - '0');
-	if (c >= 'A' && c <= 'F')
-		return (c - 'A') + 10;
+int CastCharHexToDec(char ch) {
 
+	int Dec = 0;
+	if (ch >= '0' && ch <= '9')
+		Dec = (ch - '0');
+	if (ch >= 'A' && ch <= 'F')
+		Dec = (ch - 'A') + 10;
+
+	return Dec;
 }
 
 //It returns the decimal value of the address
@@ -27,8 +32,8 @@ int Convert_address_hex_to_dec(char* str)
 	for (j = 0; j<6; j++)
 	{
 		c = str[j];
-		value = Cast_char_hex_to_dec(c);
-		z = pow(x, power);
+		value = CastCharHexToDec(c);
+		z = (int)pow(x, power);
 		decimalNumber = decimalNumber + (value*z);
 		power--;
 	}
@@ -38,10 +43,9 @@ int Convert_address_hex_to_dec(char* str)
 void Convert_address_dec_to_hex(int num, char hexadecimalNumber[7])
 {
 
-	long int decimalNumber, remainder, quotient;
+	long int decimalNumber, quotient;
 	int i = 1, j, temp;
 	char help_hexadecimalNumber[7];
-	char c;
 	int k;
 
 	decimalNumber = (long int)num;
@@ -80,11 +84,11 @@ int main(int argc, char* argv[])
 	int i;
 	int k;
 	int dec_num;
-	time_t t;
+	//time_t t;
 	char hexadecimalNumber[8];
 	static const char alphanum[] = "ABCDEF0123456789";
 	static const char divin4[] = "C048";
-	FpTrace = fopen("trace.txt", "w");
+	FpTrace = fopen("Trace.txt", "w");
 	srand((unsigned)time(NULL));
 	/*oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo Random address OoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO*/
 	for (k = 0; k < 5; ++k)

@@ -19,12 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="memInCreation.c" />
+    <ClCompile Include="TraceTextFileCreation.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F352D0C1-A012-4742-B248-34B6A08FC165}</ProjectGuid>
+    <ProjectGuid>{AD70D6FB-A923-4230-AB6A-55E975FAD309}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>MemInTextCreation</RootNamespace>
+    <RootNamespace>TraceTextFileCreation</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -90,7 +90,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_DEPRECATE</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
